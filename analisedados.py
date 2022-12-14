@@ -32,8 +32,9 @@ print(tabela["Churn"].value_counts(normalize=True).map("{:.1%}".format))
 #Passo 4 - Análise mais completa  - entender a causa dos cancelmanetos/possiveis soluções
 #Aqui usei o modulo plotly.express para montar um grafico e exibir ele
 #Criando o gráfico
-grafico = px.histogram(tabela, x="TotalGasto")
+grafico = px.histogram(tabela, x="TotalGasto", color="Churn")
 #Exibindo o gráfico
 grafico.show()
+
 
 
